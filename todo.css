@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Tahoma;
+  background: linear-gradient(to right, #00152e, #1f61ad);
+}
+
+.todo-container {
+  margin: 30px auto 0;
+  background-color: rgba(246, 246, 246, 0.2); /* شفافية */
+  width: 600px;
+  height: 500px;
+  border-radius: 5px;
+  backdrop-filter: blur(10px); /* البلور */
+  -webkit-backdrop-filter: blur(10px); /* دعم سفاري */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* حدود خفيفة */
+}
+
+.todo-container .add-task {
+  padding: 15px;
+
+}
+.todo-container .add-task input {
+  display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, .3);
+  width: calc(100% - 15px);
+  color: #FFF;
+  font-size: 20px;
+  border-radius: 50px;
+  transition: .4s;
+}
+.todo-container .add-task input:focus {
+  outline: none;
+  border: 1px solid #0027538a;
+}
+.todo-container .add-task .plus {
+  position: absolute;
+  height: 43px;
+  width: 43px;
+  background-color: #FFF;
+  right: 12px;
+  border-radius: 50%;
+  line-height: 43px;
+  text-align: center;
+  color: #009688;
+  cursor: pointer;
+  font-size: 38px;
+  -webkit-transition: transform .3s;
+  -moz-transition: transform .3s;
+  transition: transform .3s;
+}
+.todo-container .add-task .plus:hover {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.todo-container .tasks-content {
+  padding: 15px;
+  height: 100%;
+}
+.todo-container .tasks-content .no-tasks-message {
+  color: #777;
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+.todo-container .tasks-content > span {
+  display: block;
+  background-color: #ffffff42;
+  padding: 18px;
+  font-size: 18px;
+  color: #fff ;
+  border-radius: 5px;
+}
+.todo-container .tasks-content > span:not(:last-child) {
+  margin-bottom: 10px;
+}
+.todo-container .tasks-content .task-box .delete {
+  float: right;
+  background-color: #E91E63;
+  padding: 4px 10px;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.todo-container .tasks-content .task-box.finished {
+  text-decoration: line-through;
+}
+.task-stats {
+  overflow: hidden;
+  margin: 10px auto;
+  width: 600px;
+  font-size: 12px;
+}
+.task-stats .tasks-count {
+  width: 50%;
+  float: left;
+  padding: 10px;
+  color: #ffffffaf;
+}
+.task-stats .tasks-completed {
+  width: 50%;
+  float: right;
+  padding: 10px;
+  text-align: right;
+  color: #ffffffb6;
+
+}
+.task-stats .tasks-count span,
+.task-stats .tasks-completed span {
+  color: #FFF;
+
+  padding: 1px 5px;
+  font-size: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.task-stats .tasks-count span {
+  background-color: #E91E63;
+  
+}
+.task-stats .tasks-completed span {
+  background-color: #03A9F4;
+}
